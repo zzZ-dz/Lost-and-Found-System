@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Top Navigation Bar -->
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Campus Lost and Found System</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="user-auth.html">User Login/Registration</a></li>
+            <li><a href="post-item.html">Post Items</a></li>
+            <li><a href="find-items.html">Find Items</a></li>
+            <li><a href="announcements.html">Announcements</a></li>
+            <li><a href="admin-login.html">Admin Access</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body class="admin-page">
+    <div class="admin-auth-section">
+        <div class="admin-auth-container">
+            <h2>Admin Login</h2>
+            <form class="admin-auth-form" action="admin-dashboard.html" method="POST">
+                <label for="admin-username">Admin Username:</label>
+                <input type="text" id="admin-username" name="admin-username" placeholder="Enter your admin username" required>
+                
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" name="admin-password" placeholder="Enter your password" required>
+                
+                <button type="submit" class="admin-btn">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- Footer Area -->
+<footer id="contact-section">
+    <div class="footer-content">
+        <p>&copy; 2024 Campus Lost and Found System. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

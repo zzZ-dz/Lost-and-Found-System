@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login/Registration - Campus Lost and Found System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Campus Lost and Found System</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="user-auth.html">User Login/Registration</a></li>
+                <li><a href="post-item.html">Post Items</a></li>
+                <li><a href="find-items.html">Find Items</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="admin-login.html">Admin Access</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Full-Screen Background -->
+    <section class="hero">
+        <div class="overlay">
+            <div class="auth-container">
+                <!-- Toggle Buttons -->
+                <div class="auth-toggle">
+                    <button id="login-btn" class="auth-btn">User Login</button>
+                    <button id="register-btn" class="auth-btn">User Registration</button>
+                </div>
+                <!-- Login Form -->
+<div id="login-form" class="auth-form hidden">
+    <h2>Login</h2>
+    <form>
+        <label for="login-email">Email:</label>
+        <input type="text" id="login-email" name="email" placeholder="Please enter your email address" required>
+
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="password" placeholder="Please enter your password" required>
+
+        <button type="submit" class="btn">Login</button>
+
+        <!-- Forget Password Link -->
+        <p class="forget-password">
+            <a href="reset-password.html">Forget Password?</a>
+        </p>
+    </form>
+</div>
+
+                <!-- Registration Form -->
+                <div id="register-form" class="auth-form hidden">
+                    <h2>Registration</h2>
+                    <form>
+                        <label for="register-username">Username:</label>
+                        <input type="text" id="register-username" name="username" placeholder="Enter your username, the username must be 6-12 characters long" required>
+
+                        <label for="register-email">Email:</label>
+                        <input type="email" id="register-email" name="email" placeholder="Enter your email address(name@example.com)" required>
+
+                        <label for="register-studentid">Student ID:</label>
+                        <input type="studentid" id="register-studentid" name="studentid" placeholder="Enter your student ID" required>
+
+                        <label for="register-password">Password:</label>
+                        <input type="password" id="register-password" name="password" placeholder="Enter your password, the password must be at least 8 characters long" required>
+
+                        <label for="register-confirm password">Confirm Password:</label>
+                        <input type="confirm password" id="register-confirm password" name="confirm password" placeholder="Confirm your password to complete registration" required>
+
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Social Icons and Copyright -->
+    <footer id="contact-section">
+        <div class="footer-content">
+            <p>&copy; 2024 Campus Lost and Found System. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+

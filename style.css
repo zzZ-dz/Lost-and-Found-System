@@ -1,0 +1,762 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Top Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(76, 175, 80, 0.9); /* Green background for header */
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Full-Screen Background Image */
+.hero {
+    height: 90vh; /* Adjust height */
+    background: url('images/campus-map.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.overlay-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.overlay-text p {
+    font-size: 1.2rem;
+}
+
+/* Carousel Section */
+.carousel {
+    position: relative;
+    width: 60%; /* Moderate width, not full screen */
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex: 0 0 100%;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+
+/* Footer Section */
+footer {
+    background-color: rgba(76, 175, 80, 0.9); /* Green background for footer */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Social Media Icon Styles */
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #333; /* Color change on hover */
+}
+
+/* Form Section for Post Item */
+.post-item-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-item-section h2 {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.post-item-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.post-item-form input[type="text"],
+.post-item-form input[type="date"],
+.post-item-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.post-item-form textarea {
+    resize: vertical;
+}
+
+.post-item-form .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post-item-form .btn:hover {
+    background-color: #333;
+}
+/* Authentication Page Container */
+.auth-container {
+    width: 90%; /* 宽度更大 */
+    max-width: 600px; /* 最大宽度增加 */
+    margin: 0 auto;
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0); /* 添加渐变背景 */
+    padding: 30px; /* 增加填充 */
+    border-radius: 15px; /* 增加圆角 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1); /* 更高级的阴影 */
+    text-align: center;
+    transition: transform 0.3s ease; /* 添加动画效果 */
+}
+
+/* Toggle Buttons */
+.auth-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* 增加间距 */
+    margin-bottom: 25px;
+}
+
+.auth-btn {
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem; /* 增大字体 */
+    color: #333;
+    border: none;
+    border-radius: 25px; /* 增加圆角 */
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* 添加动画 */
+}
+
+.auth-btn.active {
+    background-color: #4CAF50; /* 活跃状态颜色 */
+    color: #fff;
+}
+
+.auth-btn:hover:not(.active) {
+    background-color: #ddd;
+    transform: scale(1.05); /* 悬停时轻微放大 */
+}
+
+/* Login and Registration Form Styles */
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+.auth-form h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-size: 1.5rem; /* 增大标题字体 */
+}
+
+.auth-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 10px; /* 增加圆角 */
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* 内部阴影 */
+}
+
+.auth-form .btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* 添加悬停动画 */
+}
+
+.auth-form .btn:hover {
+    background-color: #333;
+    transform: scale(1.05); /* 悬停时轻微放大 */
+}
+/* Full-Screen Background Image for Post Item Page */
+.hero {
+    height: 90vh;
+    background: url('images/campus-map.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Post Item Form Section */
+.post-item-section {
+    width: 80%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-item-section h2 {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.post-item-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.post-item-form input[type="text"],
+.post-item-form input[type="date"],
+.post-item-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-item-form textarea {
+    resize: vertical;
+}
+
+.post-item-form .btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post-item-form .btn:hover {
+    background-color: #333;
+}
+
+/* Forget Password Link */
+.forget-password {
+    text-align: right; /* Align to the right */
+    margin-top: 10px; /* Add spacing above the link */
+    font-size: 0.9rem; /* Adjust font size */
+}
+
+.forget-password a {
+    color: #4CAF50; /* Use theme green color for the link */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Add hover transition */
+}
+
+.forget-password a:hover {
+    color: #333; /* Change color on hover */
+}
+/* Reset Password Section */
+.auth-container {
+    width: 90%; /* Increased width */
+    max-width: 600px; /* Max width for better visibility */
+    margin: 0 auto;
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0); /* Gradient background */
+    padding: 30px; /* Add padding for spacing */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1); /* Elevated box shadow */
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.auth-container h2 {
+    color: #4CAF50; /* Green theme */
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.auth-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 10px; /* Rounded input boxes */
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow */
+}
+
+.auth-container .btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effects */
+}
+
+.auth-container .btn:hover {
+    background-color: #333;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+/* Form Container (统一样式并居中对齐) */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* 居中对齐所有内容 */
+}
+
+.form-container h2 {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+    text-align: center; /* 居中对齐标签文本 */
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    max-width: 400px; /* 控制输入框的最大宽度 */
+    padding: 12px;
+    margin: 10px auto; /* 垂直和水平居中 */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    display: block;
+    box-sizing: border-box;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container .btn {
+    margin: 20px auto 0 auto; /* 按钮在容器内居中 */
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.form-container .btn:hover {
+    background-color: #333;
+}
+
+
+/* Announcements Section */
+.announcements-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.announcements-section h2 {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Announcement Container */
+.announcement-container {
+    display: flex;
+    flex-wrap: wrap; /* 支持多行布局 */
+    gap: 20px; /* 卡片之间的间距 */
+    justify-content: center; /* 卡片居中 */
+}
+
+/* Individual Announcement Block */
+.announcement-block {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px; /* 固定宽度 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* 内容左对齐 */
+}
+
+.announcement-block h3 {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.announcement-block p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.announcement-block strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Announcements Section - Ensure Footer at Bottom */
+.announcements-section {
+    min-height: calc(100vh - 80px); /* 确保内容部分填满屏幕，80px 是 header 高度 */
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 上下分布内容 */
+}
+
+/* Footer for Announcements Page */
+.announcements-section footer {
+    background: #4CAF50; /* 绿色背景 */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* 自动顶到底部 */
+}
+
+/* Contact Us Page Styles */
+body.contact-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.contact-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: url('images/campus-map.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.contact-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+.contact-container p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-form label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Footer for Contact Us Page */
+body.contact-page footer {
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Admin Login Specific Styles */
+.admin-auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('images/campus-map.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.admin-auth-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+.admin-auth-container h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.admin-auth-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+}
+
+.admin-auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px; /* 确保圆角一致 */
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* 内部阴影增加质感 */
+}
+
+.admin-auth-form .admin-btn {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-auth-form .admin-btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

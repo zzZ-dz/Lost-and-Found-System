@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Items - Campus Lost and Found System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Campus Lost and Found System</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="user-auth.html">User Login/Registration</a></li>
+                <li><a href="post-item.html">Post Items</a></li>
+                <li><a href="find-items.html">Find Items</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="admin-login.html">Admin Access</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Form -->
+    <section class="hero">
+        <div class="overlay">
+            <div class="form-container"> <!-- 使用与 post-item.html 相同的类名 -->
+                <h2>Find Items</h2>
+                <form>
+                    <label for="item-name">Item Name:</label>
+                    <input type="text" id="item-name" name="item-name" placeholder="Please enter the item name" required>
+
+                    <label for="lost-date">Lost Date:</label>
+                    <input type="date" id="lost-date" name="lost-date">
+
+                    <label for="lost-location">Lost Location:</label>
+                    <input type="text" id="lost-location" name="lost-location" placeholder="Please enter the lost location">
+
+                    <label for="description">Additional Description (optional):</label>
+                    <textarea id="description" name="description" placeholder="Please enter additional description (optional)"></textarea>
+
+                    <button type="submit" class="btn">Submit Item Information</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer id="contact-section">
+        <div class="footer-content">
+            <p>&copy; 2024 Campus Lost and Found System. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
